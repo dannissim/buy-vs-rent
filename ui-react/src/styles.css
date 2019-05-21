@@ -1,0 +1,126 @@
+/* css vars */
+:root {
+    --primarydark: #00766c;
+    --primary: #26a69a;
+    --primarylight: #64d8cb;
+}
+
+/* primary button colors */
+.btn-primary {
+    color: black;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: var(--primarydark);
+    border-color: var(--primarydark);
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem var(--primary);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: black;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: black;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem var(--primary);
+}
+
+/* secondary button colors */
+.btn-secondary {
+    color: black;
+    background-color: var(--primarylight);
+    border-color: var(--primarylight);
+}
+
+.btn-secondary:hover {
+    color: black;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+    box-shadow: 0 0 0 0.2rem var(--primary);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: black;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem var(--primary);
+}
+
+/* for the navbar */
+.bg-primary {
+    background-color: var(--primarydark) !important;
+}
+
+a.bg-primary:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: var(--primarydark) !important;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: var(--primary);
+    border-radius: 0.3rem;
+  }
+
+.border-primary {
+    border-color: var(--primary);
+}
+
+.border-secondary {
+    border-color: var(--primarylight);
+}
+
+.text-primary {
+    color: var(--primary) !important;
+  }
+
+a.text-primary:hover, a.text-primary:focus {
+    color: var(--primary) !important;
+}
+
+.myhr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  width: 100%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #ffffff;
+}
+
+
+
+
+
+@import '~bootstrap/dist/css/bootstrap.css'
