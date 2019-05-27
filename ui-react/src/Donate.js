@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron, Container} from 'react-bootstrap'
+import {Jumbotron, Container} from 'react-bootstrap'
 import {withRouter} from 'react-router-dom'
 import './fonts.css'
 
@@ -8,7 +8,6 @@ class Donate extends React.Component{
         const path = this.props.location.pathname;
         const lan = path.slice(1,3)
         const en = ((lan === 'en') ? true: false);
-
         return(
             <React.Fragment>
                 <Jumbotron fluid>

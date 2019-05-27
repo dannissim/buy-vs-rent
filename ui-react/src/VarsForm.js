@@ -4,7 +4,6 @@ import {object, number} from 'yup';
 import {Formik} from 'formik';
 // import {Persist} from 'formik-persist';
 import {withRouter} from 'react-router-dom'
-// import {fetchAPI} from './App.js';
 import './fonts.css'
 
 /*  Things left for me to implement: implement sumbitHandler: save to localStorage, if valid send request to server
@@ -71,7 +70,7 @@ const fields =
             "נתון זה משומש על מנת ש"],
         ["savingsrate", "Savings Rate From Net", "%",
             "This is used for",
-            'שעור חסכון משכר ברוטו',
+            'שעור חסכון משכר נטו',
             "%",
             "נתון זה משומש על מנת ש"],
         ["houseprice", "House Price", "Million ₪",
@@ -297,17 +296,15 @@ class VarsForm extends React.Component{
         for (var i = 0; i < fields.length; ++i)
             valuesUpdatedKeys[fields[i][1]] = values[fields[i][0]];
         localStorage.setItem('vars', JSON.stringify(valuesUpdatedKeys));
-        var url = new URL('http://192.168.1.127:5000/api/getimages/')   // 'buyvsrent.xyz/api/getimages/'
+        var url = new URL('https://www.buyvsrent.xyz/api/getimages/') // localhost:5000/api/getimages/
         Object.keys(valuesUpdatedKeys).forEach(key => url.searchParams.append(key, valuesUpdatedKeys[key]))
         url.searchParams.append('lan', lan)
         try{
             let result = await fetch(url); //wait until request is finished
-            console.log('igethere')
             let responseOK = result && result.ok;
             if (responseOK){
                 let data = await result.json();
                 await localStorage.setItem('pics', JSON.stringify(data)); // may need to add await before
-                console.log(Object.keys(data))
                 await localStorage.setItem('pics_lan', lan)
                 this.props.history.push('/'+lan+'/results');
                 setSubmitting(false);
@@ -315,8 +312,8 @@ class VarsForm extends React.Component{
         }
         catch(err){
             alert(err.toString());
-            this.props.history.push('/error');
             setSubmitting(false);
+            this.props.history.push('/error');
         }
     }
 
@@ -324,7 +321,6 @@ class VarsForm extends React.Component{
         const path = this.props.location.pathname;
         const lan = path.slice(1,3)
         const en = ((lan === 'en') ? true: false);
-        // const lan = this.props.lan;
         var vars = JSON.parse(localStorage.getItem('vars'));
         var initial = {};
         if (vars != null){

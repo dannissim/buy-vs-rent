@@ -8,7 +8,6 @@ class Contact extends React.Component{
         const path = this.props.location.pathname;
         const lan = path.slice(1,3)
         const en = ((lan === 'en') ? true: false);
-
         return(
             <Jumbotron fluid style={{marginBottom: '0px'}} >
                 <Container>
@@ -22,7 +21,7 @@ class Contact extends React.Component{
                                 Petah Tikva, and am expected to enlist in February 2020.
                                 <br/><br/>
                                 I built the app out of curiosity about what is entailed with purchasing a home in
-                                Israel, and if there is a worthwhile alternative such as renting a home.
+                                Israel, and if renting a home is a worthwhile alternative.
                             </p>
                     
                             <h1 style={{fontSize: '8vmin'}} className='font_titillium'><b>Don't be a stranger</b></h1>
@@ -43,8 +42,8 @@ class Contact extends React.Component{
                                 <b>שלום,</b> שמי דן נסים, יוצר האפליקציה. אני היום סטודנט בשנה ג' במתמטיקה ובמדעי המחשב באוניברסיטת תל אביב.
                                 בן 19, מפתח תקווה, ומיועד להתגייס בפברואר 2020.
                                 <br/><br/>
-                                בניתי את האפליקציה הזאת מתוך סקרנות במה כרוך בקניית דירה בישראל והאם יתכן שישנה אלטרנטיבה משתלמת כגון 
-                                שכירת דירה.
+                                בניתי את האפליקציה הזאת מתוך סקרנות במה כרוך בקניית דירה בישראל והאם שכירת דירה מהווה
+                                אלטרנטיבה משתלמת.
                             </p>
                     
                             <h1 dir='rtl' style={{fontSize: '8vmin', textAlign:'right'}} className='font_arimo'><b>אולי נדבר...</b></h1>

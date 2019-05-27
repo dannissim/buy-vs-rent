@@ -73,9 +73,8 @@ def net_income(bruto):
     health_ins_fee = calc_ins_fee(bruto, True)
     social_ins_fee = calc_ins_fee(bruto, False)
     inc_tax = income_tax(bruto)
-    print(inc_tax, health_ins_fee, social_ins_fee, bruto*(PENSION_RATE + HISHTALMUT_RATE))
     return int(bruto - inc_tax - health_ins_fee - social_ins_fee - bruto * (PENSION_RATE + HISHTALMUT_RATE))
 
 
 def savings(bruto):
-    return int(bruto * (PENSION_RATE + HISHTALMUT_RATE + EMPLOYER_HISHTALMUT + EMPLOYER_PENSION))
+    return int(bruto * (PENSION_RATE + HISHTALMUT_RATE + EMPLOYER_HISHTALMUT + EMPLOYER_PENSION + EMPLOYER_SEVER))

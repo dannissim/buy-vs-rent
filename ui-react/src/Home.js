@@ -7,7 +7,6 @@ import './fonts.css'
 class Home extends React.Component{
     componentDidMount(){
         var path =  this.props.location.pathname
-        // var lan = 'he' // if no lan specified, default is he
         if (path === '/'){
             const lan = localStorage.getItem('lan')
             if (lan != null)
@@ -20,7 +19,6 @@ class Home extends React.Component{
         const path = this.props.location.pathname;
         const lan = path.slice(1,3)
         const en = ((lan === 'en') ? true: false);
-
         return(
             <React.Fragment>
                 <Jumbotron fluid>
@@ -63,5 +61,4 @@ class Home extends React.Component{
         )
     }
 }
-
 export default withRouter(Home)

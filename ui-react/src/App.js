@@ -6,7 +6,6 @@ import Home from './Home'
 import ErrorPage from './ErrorPage'
 import Results from './Results'
 import Resources from './Resources'
-// import Contact from './About'
 import About from "./About";
 import Donate from "./Donate";
 import AdditionalInfo from "./AdditionalInfo";
@@ -17,11 +16,7 @@ import TermsOfUse from "./TermsOfUse";
 
 class App extends React.Component{
 
-  componentDidMount(){
-  }
-  
   render(){
-    // localStorage.clear()
     return(
       <BrowserRouter>
         <div  id='page-container' style={{flexDirection: 'column', display: 'flex', minHeight: '100vh'}}>
@@ -54,5 +49,4 @@ class App extends React.Component{
     )
   }
 }
-
 export default App;

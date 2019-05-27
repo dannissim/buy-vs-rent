@@ -1,6 +1,5 @@
 import React from 'react';
 import {Jumbotron, Container, Row, Image, Col, Button} from 'react-bootstrap'
-// import ErrorPage from './ErrorPage'
 import {withRouter} from 'react-router-dom'
 import './social_buttons.css'
 import './fonts.css'
@@ -19,7 +18,7 @@ class Results extends React.Component{
         const path = this.props.location.pathname;
         const lan = path.slice(1,3)
         
-        var url = new URL('http://192.168.1.127:5000/api/getimages/')
+        var url = new URL('https://www.buyvsrent.xyz/api/getimages/')
         Object.keys(vars).forEach(key => url.searchParams.append(key, vars[key])) 
         url.searchParams.append('lan', lan)
         try{
@@ -27,7 +26,7 @@ class Results extends React.Component{
             let responseOK = result && result.ok;
             if (responseOK){
                 let data = await result.json();
-                await localStorage.setItem('pics', JSON.stringify(data)); // may need to add await before
+                await localStorage.setItem('pics', JSON.stringify(data));
                 await localStorage.setItem('pics_lan', lan)
 
             }
@@ -46,7 +45,6 @@ class Results extends React.Component{
                 this.props.history.push('/error');
                 return;
             }
-                // return (<ErrorPage/>);
             await this.fetchAPI(vars)
         }
     }
@@ -56,7 +54,6 @@ class Results extends React.Component{
         const lan = path.slice(1,3)
         const pics_lan = await localStorage.getItem('pics_lan')
         if (lan !== pics_lan){
-            console.log('hello1')
             var vars = await JSON.parse(localStorage.getItem('vars'));
             await this.fetchAPI(vars)
              // may want to find an alternative to the use of this function. might use setstate for pics
@@ -70,7 +67,6 @@ class Results extends React.Component{
         const lan = path.slice(1,3)
         const en = ((lan === 'en') ? true: false);
         var pics = JSON.parse(localStorage.getItem('pics'));
-        // var pics = this.props.pics
         return(
                 <React.Fragment>
                 <Jumbotron fluid>

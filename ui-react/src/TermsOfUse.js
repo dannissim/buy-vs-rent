@@ -2,9 +2,6 @@ import React from 'react'
 import { Jumbotron, Container} from 'react-bootstrap'
 import {withRouter, Link} from 'react-router-dom'
 
-
-// Here I should print an error page, and automatically redirect to home page after 5 seconds
-
 class TermsOfUse extends React.Component{
     render(){
         const path = this.props.location.pathname;
@@ -14,11 +11,7 @@ class TermsOfUse extends React.Component{
             <Jumbotron fluid className='justify-content-center' >
                 <Container className='justify-content-center'>
                     <h1>Terms of Use</h1>
-                    {/* <p className="lead">
-                    bla bla
-                    </p> */}
                     <hr className="my-4"/>
-                    {/* <p className='lead'>bla bla</p> */}
                     <p className='lead'>Version 1.0</p>
 
                     <p className='lead'>The Buy VS Rent website located at https://buyvsrent.xyz is a copyrighted work belonging to Dan Nissim. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.</p>
@@ -28,13 +21,9 @@ class TermsOfUse extends React.Component{
                     <p className='lead'>These Terms of Use described the legally binding terms and conditions that oversee your use of the Site. BY LOGGING INTO THE SITE, YOU ARE BEING COMPLIANT THAT THESE TERMS and you represent that you have the authority and capacity to enter into these Terms. YOU SHOULD BE AT LEAST 18 YEARS OF AGE TO ACCESS THE SITE. IF YOU DISAGREE WITH ALL OF THE PROVISION OF THESE TERMS, DO NOT LOG INTO AND/OR USE THE SITE.</p>
 
                     <p className='lead'>These terms require the use of arbitration Section 10.2 on an individual basis to resolve disputes and also limit the remedies available to you in the event of a dispute. These Terms of Use were created with the help of the <a style={{color:'white'}} href="https://www.termsofusegenerator.net">Terms Of Use Generator</a> and the <a style={{color:'white'}} href="https://www.privacy-policy-template.com">Privacy Policy Template</a>.</p>
-
                 </Container>
             </Jumbotron>
             <Container>
-                {/* <h2>Website Terms of Use</h2> */}
-
-
                 <h2>Access to the Site</h2>
 
                 <p><strong>Subject to these Terms.</strong> Company grants you a non-transferable, non-exclusive, revocable, limited license to access the Site solely for your own personal, noncommercial use.</p>
@@ -47,7 +36,6 @@ class TermsOfUse extends React.Component{
 
                 <p>Excluding any User Content that you may provide, you are aware that all the intellectual property rights, including copyrights, patents, trademarks, and trade secrets, in the Site and its content are owned by Company or Company’s suppliers. Note that these Terms and access to the Site do not give you any rights, title or interest in or to any intellectual property rights, except for the limited access rights expressed in Section 2.1. Company and its suppliers reserve all rights not granted in these Terms.</p>
 
-
                 <h2>Third-Party Links & Ads; Other Users</h2>
 
                 <p><strong>Third-Party Links & Ads.</strong> The Site may contain links to third-party websites and services, and/or display advertisements for third-parties.  Such Third-Party Links & Ads are not under the control of Company, and Company is not responsible for any Third-Party Links & Ads.  Company provides access to these Third-Party Links & Ads only as a convenience to you, and does not review, approve, monitor, endorse, warrant, or make any representations with respect to Third-Party Links & Ads.  You use all Third-Party Links & Ads at your own risk, and should apply a suitable level of caution and discretion in doing so. When you click on any of the Third-Party Links & Ads, the applicable third party’s terms and policies apply, including the third party’s privacy and data gathering practices.</p>
@@ -56,9 +44,7 @@ class TermsOfUse extends React.Component{
 
                 <p>You hereby release and forever discharge the Company and our officers, employees, agents, successors, and assigns from, and hereby waive and relinquish, each and every past, present and future dispute, claim, controversy, demand, right, obligation, liability, action and cause of action of every kind and nature, that has arisen or arises directly or indirectly out of, or that relates directly or indirectly to, the Site. If you are a California resident, you hereby waive California civil code section 1542 in connection with the foregoing, which states: "a general release does not extend to claims which the creditor does not know or suspect to exist in his or her favor at the time of executing the release, which if known by him or her must have materially affected his or her settlement with the debtor."</p>
 
-
                 <p><strong>Google DoubleClick DART Cookie.</strong> Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
-
 
                 <h2>Disclaimers</h2>
 
@@ -143,7 +129,6 @@ class TermsOfUse extends React.Component{
 
                 <h2>Contact Information</h2>
 
-                {/* <p>Address: Israel</p> */}
                 <p>Email: nissim.dan@gmail.com</p>
             </Container>
             </React.Fragment>

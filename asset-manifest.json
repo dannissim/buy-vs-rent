@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.93f12689.chunk.css",
+    "main.js": "/static/js/main.4b982811.chunk.js",
+    "main.js.map": "/static/js/main.4b982811.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.0671dcc1.chunk.js": "/static/js/2.0671dcc1.chunk.js",
+    "static/js/2.0671dcc1.chunk.js.map": "/static/js/2.0671dcc1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c38b07a53c27d0d3f3302ed86ece6764.js": "/precache-manifest.c38b07a53c27d0d3f3302ed86ece6764.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.93f12689.chunk.css.map": "/static/css/main.93f12689.chunk.css.map",
+    "static/media/salary_graph.png": "/static/media/salary_graph.827ba66f.png"
+  }
+}

@@ -3,9 +3,6 @@ import { Jumbotron, Container} from 'react-bootstrap'
 import {withRouter} from 'react-router-dom'
 import './fonts.css'
 
-
-// Here I should print an error page, and automatically redirect to home page after 5 seconds
-
 class Resources extends React.Component{
     render(){
         return(
@@ -45,10 +42,10 @@ class Resources extends React.Component{
                         The <a style={{color:'white'}} href='http://flask.pocoo.org/docs/1.0/'>Flask docs</a> - which also has a getting-started tutorial, 
                         Miguel Grinberg's <a style={{color:'white'}} href='https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world'>Flask Mega-Tutorial</a>,
                         and this <a style={{color:'white'}} href='https://www.udemy.com/the-build-a-saas-app-with-flask-course/'> Udemy Course</a>.
-                        I also used the <a style={{color:'white'}} href='https://github.com/alisaifee/flask-limiter'>Flask-Limiter</a> extension.<br/><br/>
+                        {/* I also used the <a style={{color:'white'}} href='https://github.com/alisaifee/flask-limiter'>Flask-Limiter</a> extension.<br/><br/>
 
                         Additional services the app uses are <a style={{color:'white'}} href='https://www.google.com/adsense/start/'>Google AdSense</a>, and&nbsp;
-                        <a style={{color:'white'}} href='https://analytics.google.com/analytics/web/provision/?authuser=0#/provision'>Google Analytics</a>.
+                        <a style={{color:'white'}} href='https://analytics.google.com/analytics/web/provision/?authuser=0#/provision'>Google Analytics</a>. */}
                     </p>
 
                     <h3 className='font_titillium'><b>Deployment</b></h3>
@@ -61,7 +58,7 @@ class Resources extends React.Component{
 
                     <h3 className='font_titillium'><b>Logic and Algorithms</b></h3>
                     <p>
-                        In the salary taxes calculator part of the app, <a dir='rtl' style={{color:'white'}} href='https://www.kolzchut.org.il/he'>כל זכות</a>&nbsp;
+                        In the salary taxes & savings calculator part of the app, <a dir='rtl' style={{color:'white'}} href='https://www.kolzchut.org.il/he'>כל זכות</a>&nbsp;
                         was a very useful resource to understand the process.
                     </p>
 

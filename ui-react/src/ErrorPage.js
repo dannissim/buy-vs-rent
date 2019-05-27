@@ -2,9 +2,6 @@ import React from 'react'
 import { Jumbotron, Container} from 'react-bootstrap'
 import {withRouter} from 'react-router-dom'
 
-
-// Here I should print an error page, and automatically redirect to home page after 5 seconds
-
 class ErrorPage extends React.Component{
     render(){
         setTimeout(() => {

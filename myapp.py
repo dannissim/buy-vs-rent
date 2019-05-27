@@ -1,14 +1,16 @@
 from flask import Flask, render_template, request
-from housepurchasecalc.vars_module import default_vars
-from housepurchasecalc.graphscreator import build_all_graphs
-from flask_cors import CORS # only for development
+from algorithms.vars_module import default_vars
+from algorithms.graphscreator import build_all_graphs, build_test_graph
 import json
+import logging
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
+    # app.config.from_pyfile('config.py')
     return app
 
+logging.basicConfig(filename='custom_errorlog.txt')
+logging.info('this should be on log file')
 app = create_app()
 
 @app.route('/api/getimages/')
@@ -20,8 +22,15 @@ def get_api_results():
     millions = {'House Price'}
     for field in default_vars:
         get_param = request.args.get(field, type=int)
+        logging.debug(get_param)
+        # print(str(get_param))
+        # if get_param == None:
+        #     return json.dumps([])
         if field in percentages:
-            get_param /= 100
+            try:
+                get_param /= 100
+            except Exception:
+                print(field)
         elif field in thousands:
             get_param *= 1000
         elif field in millions:
@@ -29,4 +38,12 @@ def get_api_results():
         vars[field] = get_param
     lan = request.args.get('lan', type=str)
     encoded_images_dict = build_all_graphs(vars, lan)
+    # encoded_images_dict = build_test_graph(vars, lan)
     return json.dumps(list(encoded_images_dict.values()))
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def render_app(path):
+    return render_template('index.html')
+
+

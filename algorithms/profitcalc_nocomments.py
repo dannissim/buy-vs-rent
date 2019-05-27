@@ -1,5 +1,5 @@
 from .salarycalc.core import net_income
-from . import vars_module
+from .vars_module import validate_vars
 
 '''compound interest calculator: args: starting amnt, number of periods to compound and to add, interest rate, 
     and additions to amnt each period, and annual additions increase rate
@@ -68,7 +68,7 @@ def mortgage_calc(vars, amnt, payment, timeperiod=float('inf'), payment_increase
 # returns assets value given vars dictionary.
 # If timeperiod param is entered, the func returns assets value after timeperiod
 def assets(vars): #timeperiod=vars.vars['YEARS_TO_FUTURE']):
-    vars_module.validate_vars(vars) # input validation
+    validate_vars(vars) # input validation
     if vars['Rent'] > net_income(vars['Gross Salary']) * vars['Savings Rate From Net']:    # input validation
         return 0    # can't afford rent. Saving Rate From Net var is to small or rent is too high
     prepurch_savings_return = 0.03
@@ -100,7 +100,7 @@ def assets(vars): #timeperiod=vars.vars['YEARS_TO_FUTURE']):
     purch_price = house_value_calc(vars, years_save)
     savings_amnt_at_purchase = results_lst[years_save]
 
-    mortgage_payment = net_salary_after_time(vars, years_save) * vars['Savings Rate From Net'] * 12
+    mortgage_payment = int(net_salary_after_time(vars, years_save) * vars['Savings Rate From Net'] * 12)#yearly payment
     mortgage_amnt = purch_price - savings_amnt_at_purchase
     mortgage_len = mortgage_calc(vars, mortgage_amnt, mortgage_payment, payment_increase_rate=vars['Salary Growth'])
     if mortgage_len == -1:
@@ -112,6 +112,7 @@ def assets(vars): #timeperiod=vars.vars['YEARS_TO_FUTURE']):
                                                         vars['Years To Future'], vars['Salary Growth']))
                     # may need to subtract years_save from timeperiod arg in mortgage_calc - should be correct though
 
+    #   need to change to make additions arr instead of constant additions
     annual_savings_after_mortgage = net_salary_after_time(vars, vars['Years To Future']) * \
                                     vars['Savings Rate From Net'] * 12
 
@@ -136,7 +137,7 @@ def bruto_salary_after_time(vars, timeperiod):
 
 # only rent without buying a house
 def rent_savings(vars):
-    vars_module.validate_vars(vars)
+    validate_vars(vars)
     annual_savings = annual_savings_lst(vars, vars['Years To Future'])
     #problem that annual_savings list has negative values
 

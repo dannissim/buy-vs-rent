@@ -1,5 +1,5 @@
 import numpy as np
-from bidi import algorithm as bidialg # this module fixes rtl text in python
+from bidi.algorithm import get_display # this module fixes rtl text in python
 
 default_vars = {    # vars dictionary - var name : var default value, this dictionary can be changed
             # overall 15 parameters
@@ -42,7 +42,7 @@ vars_range = {  #vars range dictionary - var name : var possible range, this dic
     "Rent Growth" : np.around(np.linspace(0.0, 0.06, num = 7), 2),  # jumps of 2%-3%, may be constant linspace(0.0, 0.06, num = 7)
     "House Price Growth" : np.around(np.linspace(0.0, 0.08, num = 5), 5), #linspace(0.0, 0.07, num = 5)
     "House Price" : np.arange(1.25e6, 3.6e6, 250000).astype(int),    # may be constant
-    "Long Term Savings Return" : np.around(np.linspace(0.04, 0.1, num = 7), 2), # may be constant - not constant
+    "Long Term Savings Return" : np.around(np.linspace(0.04, 0.13, num = 7), 2), # may be constant - not constant
     "Mortgage Interest" : np.around(np.linspace(0.02, 0.07, num = 6), 3), #2-7, jumps 1 linspace(0.02, 0.07, num = 6)
     "Savings Rate From Net" : np.around(np.linspace(0.25, 0.7, num = 5), 2), #start from 0, jumps of 10%, may be constant *
     "Salary Growth" : np.around(np.linspace(0.0, 0.03, num = 4), 2) # may be constant *
@@ -84,22 +84,22 @@ def validate_vars(vars):
 
 def translate(var: str):
     switcher = {
-        'Years To Future' : bidialg.get_display('שנים קדימה'),
-        'Years Until Retirement' : bidialg.get_display('שנים עד יציאה לפנסיה'),
-        'Gross Salary' : bidialg.get_display('שכר ברוטו'),
-        'Years To Save' : bidialg.get_display('שנים לחסוך לפני רכישה'),
-        'Start Amount' : bidialg.get_display('סכום התחלתי'),
-        'Rent' : bidialg.get_display('שכירות'),
-        'Rent Growth' : bidialg.get_display('קצב גדילת מחיר השכירות'),
-        'House Price' : bidialg.get_display('מחיר דירה'),
-        'House Price Growth' : bidialg.get_display('קצב גדילת מחירי הדיור'),
-        'Long Term Savings Return' : bidialg.get_display('ריבית חסכון לתווך רחוק'),
-        'Mortgage Interest' : bidialg.get_display('ריבית משכנתא'),
-        'Savings Rate From Net' : bidialg.get_display('שעור חסכון משכר ברוטו'), 
-        'Salary Growth' : bidialg.get_display('קצב גדילת השכר'),
-        'Purchase House' : bidialg.get_display('לקנות דירה'),
-        'Rent For Life' : bidialg.get_display('לשכור תמיד'),
-        'Assets Value (₪)' : bidialg.get_display('שווי הנכסים בסוף התקופה (₪)')
+        'Years To Future' : get_display('שנים קדימה'),
+        'Years Until Retirement' : get_display('שנים עד יציאה לפנסיה'),
+        'Gross Salary' : get_display('שכר ברוטו'),
+        'Years To Save' : get_display('שנים לחסוך לפני רכישה'),
+        'Start Amount' : get_display('סכום התחלתי'),
+        'Rent' : get_display('שכירות'),
+        'Rent Growth' : get_display('קצב גדילת מחיר השכירות'),
+        'House Price' : get_display('מחיר דירה'),
+        'House Price Growth' : get_display('קצב גדילת מחירי הדיור'),
+        'Long Term Savings Return' : get_display('ריבית חסכון לתווך רחוק'),
+        'Mortgage Interest' : get_display('ריבית משכנתא'),
+        'Savings Rate From Net' : get_display('שעור חסכון משכר ברוטו'), 
+        'Salary Growth' : get_display('קצב גדילת השכר'),
+        'Purchase House' : get_display('לקנות דירה'),
+        'Rent For Life' : get_display('לשכור תמיד'),
+        'Assets Value (₪)' : get_display('שווי הנכסים בסוף התקופה (₪)')
     }
     return switcher[var]
 

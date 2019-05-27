@@ -49,8 +49,8 @@ class TopNavBar extends React.Component {
                             }
                         </LinkContainer>
                             {en ?
-                                <Nav.Link className='active' href="https://github.com/dannissim/house-purchase-profitability">Open Source Project</Nav.Link> :
-                                <Nav.Link className='active font_arimo' href="https://github.com/dannissim/house-purchase-profitability">פרויקט קוד פתוח</Nav.Link>
+                                <Nav.Link className='active' href="https://github.com/dannissim/buy-vs-rent">Open Source Project</Nav.Link> :
+                                <Nav.Link className='active font_arimo' href="https://github.com/dannissim/buy-vs-rent">פרויקט קוד פתוח</Nav.Link>
                             }
                         <LinkContainer to={'/'+lan+'/about'}>
                             {en ?
@@ -64,5 +64,4 @@ class TopNavBar extends React.Component {
         )
     }
 }
-
 export default withRouter(TopNavBar)
