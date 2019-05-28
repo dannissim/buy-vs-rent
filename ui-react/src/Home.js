@@ -27,7 +27,7 @@ class Home extends React.Component{
                             <React.Fragment>
                                 <h1 className='font_titillium'><b>Should I Buy or Rent?</b></h1>
                                 <p className="lead">
-                                    Purchasing a home is the biggest financial decision a person makes in a lifetime.
+                                    Purchasing a home is the most significant financial decision a person makes in a lifetime.
                                     It is expected to take a loan of hundreds of thousands of shekels which we pay off throughout
                                     tens of years. We do all of this without enough knowledge of the implications and the potential
                                     risks that are implied.

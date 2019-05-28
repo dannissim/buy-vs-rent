@@ -57,6 +57,9 @@ class AdditionalInfo extends React.Component{
                     <h2 className='font_titillium'>Assumptions</h2>
                     <p className='font_titillium'>The following assumptions are made:</p>
                     <p className='font_titillium' style={{paddingLeft:'10px'}}>
+                    First of all, owning a home has sentimental and emotional value which is most likely not received
+                    when renting a home. This sentimental value is not taken in to account throughout the calculations,
+                    and each person must consider for themselves it's significance.<br/> 
                     While paying off the mortgage: We do not invest or save any money, all available money is used to
                     pay off mortgage, in order to pay off as quickly as possible.<br/>
                     It is assumed that you are a salaried employee and not self-employed (self-employed people have

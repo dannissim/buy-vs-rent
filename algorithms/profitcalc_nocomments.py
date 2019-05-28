@@ -144,9 +144,9 @@ def rent_savings(vars):
     savings = compound_interest(vars['Start Amount'], vars['Years To Future'], vars['Long Term Savings Return'],\
                                  additions_lst= annual_savings)
     result = int(savings)
-    return result
     # may want to add this later:
-    # return max(result, 0)
+    return max(result, 0)
+    # return result
 
 
 def annual_savings_lst(vars, years):

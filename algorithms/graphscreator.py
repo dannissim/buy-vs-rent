@@ -69,8 +69,8 @@ def build_all_graphs(vars, lan):
 #build_all_graphs(vars)
 #build_graph(vars, 'Mortgage Interest', vars_module.vars_range['Mortgage Interest'])
 
-def build_test_graph(vars, lan):
-    return {'House Price' : build_graph(vars, lan, 'House Price', vars_range['House Price'])}
+# def build_test_graph(vars, lan):
+    # return {'House Price' : build_graph(vars, lan, 'House Price', vars_range['House Price'])}
 
 # test_vars={
 #     "Years Until Retirement" : 50,  # need to use

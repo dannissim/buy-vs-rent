@@ -246,14 +246,16 @@ const he_schema = object().shape({
 // Field Boilerplate code
 class VarsField extends React.Component{
     render(){
+        const screen_size = document.documentElement.clientWidth
+        const xs = screen_size < 576 ? true : false
         const {fieldName, fieldLabel, handleBlur, handleChange, append, touched, errors, values, popover}
          = this.props;
         return(
-            <Col xs={8} sm={6} md={4} lg={3} xl={3} className="text-center"> {/*here I choose field size*/}
+            <Col xs={10} sm={7} md={4} lg={3} xl={3} className="text-center"> {/*here I choose field size*/}
                 <Form.Group controlId={"form"+ fieldName}>
                     <Form.Label>{fieldLabel}</Form.Label>
                     <InputGroup>
-                        <Form.Control className="text-center" type="number" name={fieldName}
+                        <Form.Control size={xs? "lg" : ""} className="text-center" type="number" name={fieldName}
                             onChange={handleChange} onBlur={handleBlur}
                             isInvalid={!!errors[fieldName] && touched[fieldName]}
                             isValid = {!errors[fieldName] && touched[fieldName]}
@@ -267,7 +269,7 @@ class VarsField extends React.Component{
                         <OverlayTrigger trigger="focus" overlay={
                             <Popover id={"popover"+fieldName}>{popover}</Popover>
                         }>
-                            <Button variant="secondary"><i>i</i></Button>
+                            <Button variant="secondary" style={xs? {width:'48px', fontSize:'1.4em'}:{}}><i>i</i></Button>
                         </OverlayTrigger>
                         <Form.Control.Feedback type="invalid">
                             {errors[fieldName]}
@@ -300,7 +302,7 @@ class VarsForm extends React.Component{
         Object.keys(valuesUpdatedKeys).forEach(key => url.searchParams.append(key, valuesUpdatedKeys[key]))
         url.searchParams.append('lan', lan)
         try{
-            let result = await fetch(url); //wait until request is finished
+            let result = await(url); //wait until request is finished
             let responseOK = result && result.ok;
             if (responseOK){
                 let data = await result.json();
