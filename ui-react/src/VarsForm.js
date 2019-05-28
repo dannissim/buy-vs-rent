@@ -1,10 +1,17 @@
 import React from 'react'
-import {Form, InputGroup, Container, Row, Col, Button, Popover, OverlayTrigger} from 'react-bootstrap'
+import Form from 'react-bootstrap/Form'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import Popover from 'react-bootstrap/Popover'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import {object, number} from 'yup';
 import {Formik} from 'formik';
-// import {Persist} from 'formik-persist';
-import {withRouter} from 'react-router-dom'
+import withRouter from 'react-router-dom/withRouter'
 import './fonts.css'
+// import {Persist} from 'formik-persist';
 
 /*  Things left for me to implement: implement sumbitHandler: save to localStorage, if valid send request to server
         and redirect to /results page, if not show form, and set initial values with localstorage x
@@ -368,7 +375,7 @@ class VarsForm extends React.Component{
                                             <React.Fragment>
                                                 {en ?                                                    
                                                     <h5 className='font_titillium'><b>Personal Variables</b></h5> :
-                                                    <h5 className='font_arimo'><b>נתונים אישיים</b></h5>
+                                                    <h5 className='arimo'><b>נתונים אישיים</b></h5>
                                                 }
                                                 <hr className='myhr'/>
                                                 <div className='w-100'/>
@@ -381,7 +388,7 @@ class VarsForm extends React.Component{
                                                 <div className='w-100'/>
                                                 {en ?                                                    
                                                     (<h5 className='font_titillium'><b>Economic Variables</b></h5>) :
-                                                    (<h5 className='font_arimo'><b>נתונים כלכליים</b></h5>)
+                                                    (<h5 className='arimo'><b>נתונים כלכליים</b></h5>)
                                                 }
                                                 <hr className='myhr'/>
                                                 <div className='w-100'/>

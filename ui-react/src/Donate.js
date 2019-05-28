@@ -1,6 +1,7 @@
 import React from 'react'
-import {Jumbotron, Container} from 'react-bootstrap'
-import {withRouter} from 'react-router-dom'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
+import withRouter from 'react-router-dom/withRouter'
 import './fonts.css'
 
 class Donate extends React.Component{

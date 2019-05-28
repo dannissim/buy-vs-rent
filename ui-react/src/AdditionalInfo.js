@@ -1,6 +1,9 @@
 import React from 'react'
-import {Jumbotron, Container, Image, Button} from 'react-bootstrap'
-import {withRouter} from 'react-router-dom'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
+import Image from 'react-bootstrap/Image'
+import Button from 'react-bootstrap/Button'
+import withRouter from 'react-router-dom/withRouter'
 import './fonts.css'
 import salary_graph from './salary_graph.png'
 
@@ -37,7 +40,7 @@ class AdditionalInfo extends React.Component{
                     Now we simulate the purchase. We pay all of the current available savings to the down
                     payment. We calculate the mortgage, and the number of years it will take for us to pay it
                     off.
-                    </p> 
+                    </p>
                     <p className='font_titillium' style={{paddingLeft:'10px'}}>
                     We have paid off the mortgage, so now all of our savings from net are invested in a
                     savings account. We now save until the time period in to the future we are interested in is
@@ -47,7 +50,7 @@ class AdditionalInfo extends React.Component{
 
                     <p className='font_titillium'>Simulating renting a home is more simple.</p>
                     <p className='font_titillium' style={{paddingLeft:'10px'}}>
-                    Each month, we calculate the amount of money from the net salary is available for rent expenses + 
+                    Each month, we calculate the amount of money from the net salary is available for rent expenses +
                     as well as for investments. We then invest the money throughout the whole time period, if we
                     are good investors, than our assets value will be higher. We calculate the assets value with a
                     compound interest algorithm, and compare with the parallel option in which we bought a house
@@ -59,7 +62,7 @@ class AdditionalInfo extends React.Component{
                     <p className='font_titillium' style={{paddingLeft:'10px'}}>
                     First of all, owning a home has sentimental and emotional value which is most likely not received
                     when renting a home. This sentimental value is not taken in to account throughout the calculations,
-                    and each person must consider for themselves it's significance.<br/> 
+                    and each person must consider for themselves it's significance.<br/>
                     While paying off the mortgage: We do not invest or save any money, all available money is used to
                     pay off mortgage, in order to pay off as quickly as possible.<br/>
                     It is assumed that you are a salaried employee and not self-employed (self-employed people have

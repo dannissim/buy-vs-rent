@@ -1,5 +1,7 @@
 import React from "react";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import BrowserRouter from "react-router-dom/BrowserRouter";
+import Route from "react-router-dom/Route";
+import Switch from "react-router-dom/Switch";
 import TopNavBar from './TopNavBar'
 import Footer from './Footer'
 import Home from './Home'
@@ -11,10 +13,27 @@ import Donate from "./Donate";
 import AdditionalInfo from "./AdditionalInfo";
 import Privacy from "./Privacy";
 import TermsOfUse from "./TermsOfUse";
+import FontFaceObserver from 'fontfaceobserver'
 
 
 
 class App extends React.Component{
+
+  componentDidMount(){
+    const link1 = document.createElement('link')
+    link1.href = 'https://fonts.googleapis.com/css?family=Titillium+Web'
+    link1.rel = 'stylesheet'
+  
+    const link2 = document.createElement('link')
+    link2.href = 'https://fonts.googleapis.com/css?family=Arimo&display=swap'
+    document.head.appendChild(link2)
+  
+    const titillium = new FontFaceObserver('titillium')
+    const arimo = new FontFaceObserver('arimo')
+  
+    titillium.load()
+    arimo.load()
+  }
 
   render(){
     return(

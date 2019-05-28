@@ -1,8 +1,10 @@
 import React from 'react'
-import {Jumbotron, Container} from 'react-bootstrap'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
 import VarsForm from './VarsForm';
-import {withRouter} from 'react-router-dom'
+import withRouter from 'react-router-dom/withRouter'
 import './fonts.css'
+// import './styles.css'
 
 class Home extends React.Component{
     componentDidMount(){

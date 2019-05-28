@@ -1,6 +1,9 @@
 import React from 'react'
-import { Jumbotron, Container} from 'react-bootstrap'
-import {withRouter, Link} from 'react-router-dom'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
+import Link from 'react-router-dom/Link'
+import withRouter from 'react-router-dom/withRouter'
+
 
 class TermsOfUse extends React.Component{
     render(){

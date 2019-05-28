@@ -1,7 +1,8 @@
 import React from 'react'
-import {Navbar, Nav} from 'react-bootstrap'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 import {LinkContainer} from 'react-router-bootstrap'
-import {withRouter} from 'react-router-dom'
+import withRouter from 'react-router-dom/withRouter'
 import './fonts.css'
 
 class TopNavBar extends React.Component {

@@ -1,7 +1,11 @@
 import React from 'react'
-import {Navbar, Nav, Row, Col, Container} from 'react-bootstrap'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
 import {LinkContainer} from 'react-router-bootstrap'
-import {withRouter} from 'react-router-dom'
+import withRouter from 'react-router-dom/withRouter'
 import './social_buttons.css'
 
 

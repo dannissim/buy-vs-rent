@@ -1,6 +1,11 @@
 import React from 'react';
-import {Jumbotron, Container, Row, Image, Col, Button} from 'react-bootstrap'
-import {withRouter} from 'react-router-dom'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Image from 'react-bootstrap/Image'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import withRouter from 'react-router-dom/withRouter'
 import './social_buttons.css'
 import './fonts.css'
 // import {WhatsappShareButton, WhatsappIcon} from 'react-share'
